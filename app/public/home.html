@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Setting the View-port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linking jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Linking my own CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Friend Finder | Home</title>
+
+</head>
+
+<body>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron" id="jumbotron">
+        <div class="container text-center">
+            <h1>Friend Finder</h1>
+            <hr>
+            <p>Answer a few basic questions.<br>Then find a friend with the greatest compatibility!</p>
+            <div class="text-center">
+                <a href="/survey"><button id="home-submit" type="button" class="btn btn-lg btn-primary">
+					<h4><span class="glyphicon glyphicon-list alt"></span> Start Your Survey</h4>
+				</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- End Jumbotron -->
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container text-center" id="footer">
+            <a href="/api/friendsList" style="color:black">Current Friends List (Raw JSON)</a> |
+            <a href="https://github.com/Fabram613/FriendFinder" style="color:black">My GitHub Repo</a>
+            <p>© 2020 Fabian Ramirez. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!--  End Footer -->
+</body>
+
+</html>
