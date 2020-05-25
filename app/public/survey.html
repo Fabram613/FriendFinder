@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Setting the View-port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Linking jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <!-- Linking my own CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <title>Friend Finder | Survey</title>
+
+</head>
+
+<body>
+    <!-- JUMBOTRON -->
+    <div class="jumbotron" id="jumbotronSurvey">
+        <div class="container text-center">
+            <h1>Friend Finder</h1>
+            <h2>Survey Questions</h2>
+        </div>
+    </div>
+    <!-- End Jumbotron -->
+
+    <!-- Main Page Content -->
+    <div class="container-fluid">
+        <div class="container">
+            <h3>About You</h3>
+            <form>
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="newFriendName">
+                        <h4>Name (Required)</h4>
+                    </label>
+                    <input type="text" class="form-control" id="newFriendName" placeholder="Enter Your Full Name Here">
+                </div>
+                <!-- LINK TO PHOTO -->
+                <div class="form-group">
+                    <label for="newFriendPhotoLink">
+                        <h4>Link to Photo Image (Required)</h4>
+                    </label>
+                    <input type="url" class="form-control" id="newFriendPhotoLink"
+                        placeholder="Example: http://www.mysite.com/myimage.jpg">
+                </div>
+
+                <hr>
+
+                <h3>Instructions</h3>
+
+                <p>You will be given a different statement for each question. Please select the number that represents
+                    the level for what extent do you agree or disagree with the statement given, as follows:</p>
+
+                <div class="row">
+                    <div class="col-xs-2">
+                        <p>1<br>(Strongly Disagree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>2 <br>(Somewhat Disagree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>3 <br>(Neither Disagree Nor Agree - Neutral)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>4 <br>(Somewhat Agree)</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>5 <br>(Strongly Agree)</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- QUESTION 1 -->
+                <div class="form-group">
+                    <h3>Question 1</h3>
+                    <h4>You find it difficult to introduce yourself to other people.</h4>
+                    <select class="form-control" id="question1">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 2 -->
+                <div class="form-group">
+                    <h3>Question 2</h3>
+                    <h4>You often get so lost in thoughts that you ignore or forget your surroundings.</h4>
+                    <select class="form-control" id="question2">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 3 -->
+                <div class="form-group">
+                    <h3>Question 3</h3>
+                    <h4>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</h4>
+                    <select class="form-control" id="question3">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 4 -->
+                <div class="form-group">
+                    <h3>Question 4</h3>
+                    <h4>You find it easy to stay relaxed even when there is some pressure.</h4>
+                    <select class="form-control" id="question4">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 5 -->
+                <div class="form-group">
+                    <h3>Question 5</h3>
+                    <h4>You feel superior to other people.</h4>
+                    <select class="form-control" id="question5">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 6 -->
+                <div class="form-group">
+                    <h3>Question 6</h3>
+                    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                    <select class="form-control" id="question6">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 7 -->
+                <div class="form-group">
+                    <h3>Question 7</h3>
+                    <h4>You are usually highly motivated and energetic.</h4>
+                    <select class="form-control" id="question7">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 8 -->
+                <div class="form-group">
+                    <h3>Question 8</h3>
+                    <h4>You consider yourself more practical than creative.</h4>
+                    <select class="form-control" id="question8">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 9 -->
+                <div class="form-group">
+                    <h3>Question 9</h3>
+                    <h4>You do not mind being at the center of attention.</h4>
+                    <select class="form-control" id="question9">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <!-- QUESTION 10 -->
+                <div class="form-group">
+                    <h3>Question 10</h3>
+                    <h4>You do not let other people influence your actions.</h4>
+                    <select class="form-control" id="question10">
+                        <option value="" style="display:none">Select one of the following options</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <!-- SUBMIT BUTTON -->
+                <a data-toggle="modal" href="#myModal1" class="btn btn-default" id="submitButton">Submit</a>
+
+            </form>
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- End Container Fluid -->
+
+    <!-- BEGIN MODAL -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			  <h4 class="modal-title">We found a match for you!</h4>
+			</div>
+			<div class="modal-body">
+				<h2 id="bestFriendName"></h2>
+				<img id="bestFriendImg" src="https://github.com/" alt="Your Match's Image">
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+
+
+
+
+
+
+    <!-- <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Your New Famous Best Friend Is:</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="bestFriendName"></h2>
+                    <img id="bestFriendImg" src="https://github.com/" alt="Your Match's Image">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+	</div> 
+-->
+    <!-- END MODAL -->
+
+    <!-- End Main Page Content -->
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container text-center" id="footer">
+            <a href="/api/friendList" style="color:black">Current Friends List (Raw JSON)</a> |
+            <a href="https://github.com/Fabram613/FriendFinder" style="color:black">My GitHub Repo</a>
+            <p>© 2020 Fabian Ramirez. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!--  End Footer -->
