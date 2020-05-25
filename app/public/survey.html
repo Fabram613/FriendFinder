@@ -235,37 +235,13 @@
     <!-- End Container Fluid -->
 
     <!-- BEGIN MODAL -->
-	<!-- Modal -->
-	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			  <h4 class="modal-title">We found a match for you!</h4>
-			</div>
-			<div class="modal-body">
-				<h2 id="bestFriendName"></h2>
-				<img id="bestFriendImg" src="https://github.com/" alt="Your Match's Image">
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-	
-
-
-
-
-
-
-    <!-- <div id="resultsModal" class="modal fade" role="dialog">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Your New Famous Best Friend Is:</strong></h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">We found a match for you!</h4>
                 </div>
                 <div class="modal-body">
                     <h2 id="bestFriendName"></h2>
@@ -276,8 +252,7 @@
                 </div>
             </div>
         </div>
-	</div> 
--->
+    </div>
     <!-- END MODAL -->
 
     <!-- End Main Page Content -->
@@ -291,3 +266,65 @@
         </div>
     </footer>
     <!--  End Footer -->
+
+    <!-- ================ -->
+    <!-- BEGIN JAVASCRIPT -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //This function sends the results data to the modal:
+            function displayResults(htmlData, urlData) {
+                $("#bestFriendName").text(htmlData);
+                // ==== CONSOLE.LOG TESTING ====
+                console.log("\n#bestFriendName From home.html file: \n" + (htmlData));
+
+                $("#bestFriendImg").attr("src", urlData);
+                // ==== CONSOLE.LOG TESTING ====
+                console.log("\n#bestFriendName From home.html file: \n" + (urlData));
+            }
+
+            // Capture the user's input on the form with button on click event
+            $("#submitButton").on("click", function () {
+                event.preventDefault();
+
+                //Grab the new user's information submitted on the form above:
+                var newFriend = {
+                    friendName: $('#newFriendName').val().trim(),
+                    friend_photo: $('#newFriendPhotoLink').val().trim(),
+                    scores: []
+                };
+
+                //For Loop that takes each answer as a number and pushes it into friend object
+                for (var i = 1; i <= 10; i++) {
+                    var newValue = parseInt($("#question" + i).val());
+                    newFriend.scores.push(parseInt(newValue));
+                }
+
+                var currentURL = window.location.origin;
+
+                $.post(currentURL + "/api/friendList", newFriend, function (data) {
+
+                    // ==== CONSOLE.LOG TESTING ====
+                    console.log("\nAfter the $.post function from the home.html file," +
+                        "\nThis is the new friend created by user input that is now on our list of friends gathered from newFriend:  \n" +
+                        JSON.stringify(newFriend) + "\n");
+
+                    console.log("This is what we are looking for: " + JSON.stringify(data));
+
+                    var sendTheMatch = "Your Best match is " + data.name;
+                    var sendTheImage = data.photo;
+                    console.log(sendTheImage);
+
+                    displayResults(sendTheMatch, sendTheImage);
+                });
+            });
+            console.log("Ready!");
+        });
+    </script>
+
+    <!-- END JAVASCRIPT -->
+    <!-- ============== -->
+
+</body>
+
+</html>
