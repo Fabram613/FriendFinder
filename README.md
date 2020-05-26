@@ -8,7 +8,7 @@ Week 13 Homework Assignment: Node and Express Servers
 
 ## Live App
 
-* Check out [the live version of the site here](https://friend-finder-mw.herokuapp.com/). 
+* Check out [the live version of the site here](https://calm-spire-37627.herokuapp.com/)
 
 ### Overview
 
