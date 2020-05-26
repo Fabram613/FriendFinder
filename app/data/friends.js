@@ -72,6 +72,3 @@ var friendData = [{
 // Note how we export the array.
 //This makes it accessible to other files using require. 
 module.exports = friendData;
-
-// ==== CONSOLE.LOG TESTING ====
-console.log("\nInformation from the friends.js File as friendData:\n" + JSON.stringify(friendData, null, "   ") + "\n");

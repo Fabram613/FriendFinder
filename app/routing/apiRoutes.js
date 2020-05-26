@@ -85,7 +85,7 @@ module.exports = function (app) {
     res.json(chosenMatch);
     // ==== CONSOLE.LOG TESTING ====
     console.log(
-      "\nHERE IS THE BEST FAMOUS FRIEND MATCH Variable chosenMatch 3 in apiRoutes.js File is : " +
+      "\nHERE IS THE BEST FRIEND MATCH Variable chosenMatch 3 in apiRoutes.js File is : " +
         JSON.stringify(chosenMatch) +
         "\n"
     );

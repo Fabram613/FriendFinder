@@ -23,7 +23,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Uses any static files required by the html files.
-app.use(express.static('app/public/'));
+app.use(express.static("app/public/"));
 
 // This points our server to the route files, which give the server a "map" of
 // how to respond when users visit or request data from various URLs.
@@ -35,6 +35,6 @@ require("./app/routing/htmlRoutes.js")(app);
 //=========
 
 // This code effectively "starts" our server.
-app.listen(PORT, function() {
-    console.log("From server.js File: App listening on PORT: " + PORT + "\n");
+app.listen(PORT, function () {
+  console.log("From server.js File: App listening on PORT: " + PORT + "\n");
 });
